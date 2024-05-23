@@ -93,6 +93,7 @@ class User extends Authenticatable
 
     public function adminlte_profile_url(){
 
+        // return 'profile/username';
         return 'profile';
 
     }
@@ -102,6 +103,12 @@ class User extends Authenticatable
         return $this->rol->name;
 
     }
+
+    public function adminlte_image()
+    {
+        return 'https://picsum.photos/300/300';
+    }
+
 
     public function nombre(){
 
