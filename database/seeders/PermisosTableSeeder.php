@@ -27,17 +27,6 @@ class PermisosTableSeeder extends Seeder
         Permission::create(['name' => 'roles_listar']); // 4
         Permission::create(['name' => 'usuarios_listar']); // 5
         Permission::create(['name' => 'opciones_menu_listar']); // 6
-        // Permission::create(['name' => 'generales']); // 7
-        // Permission::create(['name' => 'vigencias_listar']); // 8
-        // Permission::create(['name' => 'sedes_listar']); // 9
-        // Permission::create(['name' => 'grados_listar']); // 10
-        // Permission::create(['name' => 'nivels_listar']); // 11
-        // Permission::create(['name' => 'areas_listar']); // 12
-        // Permission::create(['name' => 'asignaturas_listar']); // 13
-        // Permission::create(['name' => 'carga_academica']); // 14
-        // Permission::create(['name' => 'asignacions_listar']); // 15
-        // Permission::create(['name' => 'grupos_listar']); // 16
-        // Permission::create(['name' => 'distribuciones_listar']); // 17
         
         // create roles and assign created permissions
 

@@ -30,8 +30,8 @@ Route::get('/', function () {
 Auth::routes([
     'login'    => true,
     'logout'   => true,
-    'register' => false,
-    'reset'    => true,  // for resetting passwords
+    'register' => true,
+    'reset'    => false,  // for resetting passwords
     'confirm'  => false,  // for additional password confirmations
     'verify'   => false,  // for email verification
 ]);

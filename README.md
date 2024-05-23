@@ -64,3 +64,9 @@ Acceder a la URL en el servidor de pruebas e ingresar los sigueintes datos:
 
 - Usuario: leespitia@gmail.com
 - Clave: 123123
+
+## Observaciones
+
+- Se desarrollaron la mayor cantidad de opciones posibles, teniendo en cuenta que se desarrollo todo el sistema de Permisos, Menus y Usuarios.
+
+- Para lograr resultados en un menor tiempo, se puede utilizar una paquete como Open Admin https://open-admin.org/
