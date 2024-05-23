@@ -72,8 +72,7 @@
         </div>
 
         <div class="col">
-          <input type="text"
-              class="form-control" name="lastname2" id="lastname2" value="{{ old('lastname2') }}" placeholder="Apellido 2">
+          <input type="text" class="form-control" name="lastname2" id="lastname2" value="{{ old('lastname2') }}" placeholder="Apellido 2">
         </div>
 
       </div>

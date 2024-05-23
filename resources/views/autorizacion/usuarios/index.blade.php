@@ -38,7 +38,7 @@
                 <td>{{ $usuario->rol->name }}</td>
                 <td>{{ $usuario->email }}</td>
                 <td>{{ ($usuario->activo)? 'Activo': 'Inactivo' }}</td>
-                <td>M | V | E</td>
+                <td><a href="{{ url('usuarios/'.$usuario->id.'/edit') }}"><i class="fas fa-edit"></i></a>  &nbsp; <a href="{{ url('usuarios/'.$usuario->id) }}"><i class="fas fa-eye"></i></a></td>
             </tr>
             @endforeach            
         </tbody>

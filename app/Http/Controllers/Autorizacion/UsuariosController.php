@@ -114,7 +114,9 @@ class UsuariosController extends Controller
         $roles = Role::whereNotIn('name', $roles)->get();
         $tipoDocumentos = TipoDocumento::all();
         $municipios = Ubicacion::all();
-        return view('autorizacion.usuarios.edit', compact(['usuario', 'roles', 'tipoDocumentos', 'municipios']));
+        $departamentos = Departamento::orderBy('descripcion')->get();
+        $cargos = Cargo::all();
+        return view('autorizacion.usuarios.edit', compact(['usuario', 'roles', 'tipoDocumentos', 'municipios', 'departamentos', 'cargos']));
     }
 
     /**
@@ -141,6 +143,8 @@ class UsuariosController extends Controller
             'direccion' => 'nullable|min:5',
             'direccion_ubicacion_id' => 'required|exists:ubicacions,id',
             'genero' => 'required',
+            'departamento_id' => 'required|exists:departamentos,id',
+            'cargos_id' => 'required|cargos,id',
         ]);
 
         if($request->password){
