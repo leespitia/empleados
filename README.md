@@ -54,11 +54,13 @@ $ php artisan migrate
 
 $ php artisan db:seed
 
-- Si se despliega desde Apache, crear un VirtualHost para la carpeta public del proyecto, o si se despliga desde el servidor de pruebas de Laravel, ejecutar el comando
+- Si se despliega desde Apache, crear un VirtualHost para la carpeta public del proyecto, o si se despliega desde el servidor de pruebas de Laravel, ejecutar el comando
 
 $ php artisan serve
 
 ## Datos de prueba de acceso
+
+Acceder a la URL en el servidor de pruebas e ingresar los sigueintes datos:
 
 - Usuario: leespitia@gmail.com
 - Clave: 123123
