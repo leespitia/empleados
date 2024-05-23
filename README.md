@@ -40,7 +40,7 @@ $ git clone https://github.com/leespitia/empleados.git
 
 $ composer install
 
-- Ajustar las variables de entorno en el archivo .env
+- Ajustar las variables de entorno en el archivo .env, nombre de la base de datos, usuario y contraseña
 
 - Generar llave de seguridad
 
