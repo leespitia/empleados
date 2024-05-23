@@ -65,7 +65,7 @@ class UsuariosController extends Controller
             'email' => 'required|email',
             'telefono' => 'required',
             'direccion' => 'nullable|min:5',
-            'direccion_ubicacion_id' => 'required|exists:ubicacions,id',
+            'direccion_ubicacion_id' => 'nullable|exists:ubicacions,id',
             'password' => 'required|min:6|confirmed',
             'departamento_id' => 'required|exists:departamentos,id',
             'cargo_id' => 'required|exists:cargos,id',

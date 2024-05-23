@@ -44,7 +44,7 @@
           <label for="documento_ubicacion_id" class="col-form-label">Expedido en</label>
         </div>
         <div class="col-auto">
-          <x-adminlte-select2 name="documento_ubicacion_id" required>
+          <x-adminlte-select2 name="documento_ubicacion_id" class="form-control" enable-old-support required>
             <option value="">Seleccione un municipio</option>
             @foreach($municipios as $municipio)
             <option value="{{ $municipio->id }}">{{ $municipio->municipio.'('.$municipio->dpto.')' }}</option>
@@ -60,20 +60,20 @@
         </div>
 
         <div class="col">
-          <input type="text" class="form-control" name="name1" id="" value="{{ old('name1') }}" placeholder="Nombre 1" required>
+          <input type="text" class="form-control" name="name1" id="name1" value="{{ old('name1') }}" placeholder="Nombre 1" required>
         </div>
 
         <div class="col">
-          <input type="text" class="form-control" name="name2" id="" value="{{ old('name2') }}" placeholder="Nombre 2">
+          <input type="text" class="form-control" name="name2" id="name2" value="{{ old('name2') }}" placeholder="Nombre 2">
         </div>
 
         <div class="col">
-          <input type="text" class="form-control" name="lastname1" id="" value="{{ old('lastname1') }}" placeholder="Apellido 1" required>
+          <input type="text" class="form-control" name="lastname1" id="lastname1" value="{{ old('lastname1') }}" placeholder="Apellido 1" required>
         </div>
 
         <div class="col">
           <input type="text"
-              class="form-control" name="lastname2" id="" value="{{ old('lastname2') }}" placeholder="Apellido 2">
+              class="form-control" name="lastname2" id="lastname2" value="{{ old('lastname2') }}" placeholder="Apellido 2">
         </div>
 
       </div>
@@ -85,7 +85,7 @@
         </div>
 
         <div class="col-auto">
-          <select class="form-control" name="default_role" id="" required>
+          <select class="form-control" name="default_role" id="default_role" required>
             <option value="">Seleccione un rol para el usuario</option>
             @foreach($roles as $role)
             <option value="{{ $role->id }}">{{ $role->name }}</option>
@@ -99,7 +99,7 @@
           <label for="fecha_nacimiento" class="col-form-label">Fecha de nacimiento</label>
         </div>
         <div class="col-auto">
-          <input type="date" class="form-control" name="fecha_nacimiento" id="" value="{{ old('fecha_nacimiento') }}">
+          <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="{{ old('fecha_nacimiento') }}">
         </div>
       </div>
 
@@ -108,7 +108,7 @@
           <label for="genero" class="col-form-label">Género</label>
         </div>
         <div class="col-auto">
-          <select class="form-control" name="genero" id="" required>
+          <select class="form-control" name="genero" id="genero" required>
             <option value="">Seleccione un género</option>
             <option value="F">Femenino</option>
             <option value="M">Masculino</option>
@@ -122,7 +122,7 @@
           <label for="email" class="col-form-label">Correo electrónico</label>
         </div>
         <div class="col-auto">
-          <input type="text" class="form-control" name="email" id="" value="{{ old('email') }}" required>
+          <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" required>
         </div>
 
       </div>
@@ -132,7 +132,7 @@
           <label for="telefono" class="col-form-label">Teléfono</label>
         </div>
         <div class="col-auto">
-          <input type="text" class="form-control" name="telefono" id="" value="{{ old('telefono') }}" required>
+          <input type="text" class="form-control" name="telefono" id="telefono" value="{{ old('telefono') }}" required>
         </div>
 
       </div>
@@ -143,7 +143,7 @@
           <label for="direccion" class="col-form-label">Dirección</label>
         </div>
         <div class="col-auto">
-          <input type="text" class="form-control" name="direccion" id="" value="{{ old('direccion') }}">
+          <input type="text" class="form-control" name="direccion" id="direccion" value="{{ old('direccion') }}">
         </div>
       </div>
 
@@ -152,7 +152,7 @@
           <label for="direccion_ubicacion_id" class="col-form-label">Municipio</label>
         </div>
         <div class="col-auto">
-          <x-adminlte-select2 name="direccion_ubicacion_id">
+          <x-adminlte-select2 name="direccion_ubicacion_id" enable-old-support>
             <option value="">Seleccione un municipio</option>
             @foreach($municipios as $municipio)
             <option value="{{ $municipio->id }}">{{ $municipio->municipio.'('.$municipio->dpto.')' }}</option>
@@ -176,7 +176,7 @@
           <label for="password_confirmation" class="col-form-label">Confirmar contraseña</label>
         </div>
         <div class="col-auto">
-          <input type="password" class="form-control" name="password_confirmation" id="" required>
+          <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" required>
         </div>
 
       </div>
