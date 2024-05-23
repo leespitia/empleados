@@ -59,22 +59,22 @@
           <label for="documento_ubicacion_id" class="col-form-label">Nombre</label>
         </div>
 
-        <div class="col-auto">
+        <div class="col">
           <input type="text" class="form-control" name="name1" id="" value="{{ old('name1') }}" placeholder="Nombre 1" required>
         </div>
 
-        <div class="col-auto">
+        <div class="col">
           <input type="text" class="form-control" name="name2" id="" value="{{ old('name2') }}" placeholder="Nombre 2">
         </div>
 
-        <div class="col-auto">
+        <div class="col">
           <input type="text" class="form-control" name="lastname1" id="" value="{{ old('lastname1') }}" placeholder="Apellido 1" required>
         </div>
 
-        <!-- <div class="col-auto">
+        <div class="col">
           <input type="text"
               class="form-control" name="lastname2" id="" value="{{ old('lastname2') }}" placeholder="Apellido 2">
-        </div> -->
+        </div>
 
       </div>
 
@@ -181,7 +181,35 @@
 
       </div>
 
+      <hr>
 
+      <div class="row">
+        <div class="col-3 input-group mb-2">
+          <label for="departamento_id" class="col-form-label">Departamento</label>
+        </div>
+        <div class="col-auto">
+          <select class="form-control" name="departamento_id" id="departamento_id" required>
+            <option value="">Seleccione un departamento</option>
+            @foreach($departamentos as $departamento)
+            <option value="{{ $departamento->id }}">{{ $departamento->descripcion }}</option>
+            @endforeach
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3 input-group mb-2">
+          <label for="cargo_id" class="col-form-label">Cargo</label>
+        </div>
+        <div class="col-auto">
+          <select class="form-control" name="cargo_id" id="cargo_id" required>
+            <option value="">Seleccione un cargo</option>
+            @foreach($cargos as $cargo)
+            <option value="{{ $cargo->id }}">{{ $cargo->descripcion }}</option>
+            @endforeach
+          </select>
+        </div>
+      </div>
 
     </div>
 

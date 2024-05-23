@@ -20,10 +20,12 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            UbicacionTableSeeder::class,
-            TipoDocumentosTableSeeder::class,
-            PermisosTableSeeder::class,
-            MenuOptionsTableSeeder::class,
+            // UbicacionTableSeeder::class,
+            // TipoDocumentosTableSeeder::class,
+            // PermisosTableSeeder::class,
+            // MenuOptionsTableSeeder::class,
+            DepartamentosTableSeeder::class,
+            CargosTableSeeder::class,
         ]);
     }
 }

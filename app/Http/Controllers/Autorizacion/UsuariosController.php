@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Autorizacion;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cargo;
+use App\Models\Departamento;
 use App\Models\Estudiante;
 use Illuminate\Http\Request;
 use App\Models\TipoDocumento;
@@ -36,7 +38,9 @@ class UsuariosController extends Controller
         $tipoDocumentos = TipoDocumento::all();
         $roles = Role::all();
         $municipios = Ubicacion::all();
-        return view('autorizacion.usuarios.create', compact(['tipoDocumentos', 'roles', 'municipios']));
+        $departamentos = Departamento::orderBy('descripcion')->get();
+        $cargos = Cargo::all();
+        return view('autorizacion.usuarios.create', compact(['tipoDocumentos', 'roles', 'municipios', 'departamentos', 'cargos']));
     }
 
     /**
@@ -63,6 +67,8 @@ class UsuariosController extends Controller
             'direccion' => 'nullable|min:5',
             'direccion_ubicacion_id' => 'required|exists:ubicacions,id',
             'password' => 'required|min:6|confirmed',
+            'departamento_id' => 'required|exists:departamentos,id',
+            'cargo_id' => 'required|exists:cargos,id',
 
         ]);
 
